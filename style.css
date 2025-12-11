@@ -44,9 +44,11 @@ body {
 }
 
 .webcam {
-  position: relative;
-  width: 300px;
-  height: 225px;
+    max-width: 300px; /* Use your desktop size as a max */
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden; /* Prevent content from spilling */
+
 }
 
 #webcam {
@@ -57,8 +59,9 @@ body {
   position: absolute;
   top: 0;
   left: 0;
-  width: 300px;
-  height: 100%;
+  width: 100%;
+  height: auto;
+  display: block;
 }
 
 .cake-area {
