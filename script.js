@@ -325,8 +325,8 @@ function startHandTracking() {
     onFrame: async () => {
       await hands.send({ image: video });
     },
-    width: WEBCAM_WIDTH,
-    height: WEBCAM_HEIGHT,
+    width: video.videoWidth,
+    height: video.videoHeight
   });
 
   camera.start();
