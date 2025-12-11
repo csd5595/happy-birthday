@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title> Mpoumpouko's Birthday ~</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1 class="page-title">
+      HAPPY BIRTHDAY MPOUMPOUKO MOU 
+    </h1>
+
+      <h2 class = "subtitle">
+        Σε αγαπαω πολυ και ας εισαι μακρια μου
+      </h2>
+   
+      <div class="content">
+      <video id="birthday-video" muted playsinline loop>
+      <source src="assets/birthday_message.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+
+      <div class="webcam">
+        <video id="webcam" autoplay playsinline></video>
+        <canvas id="canvas"> </canvas>
+      </div>
+   
+      <div class="cake-area">
+        <img src="assets/cake_bg.png" alt="" class="cake-bg" />
+        <img src="assets/cake_unlit.gif" alt="" class="cake" />
+
+        <img src="assets/kiss.jpg" alt="A special birthday photo" class="birthday-photo hidden" id="birthday-photo" />
+        
+      </div>
+      <p class="instructions">
+        Blow out the candles
+      </p>
+    </div>
+    <p class="signature">
+      ᓚᘏᗢ | made by
+      <a href="https://www.instagram.com/markatou._/">@markatou._</a>
+    </p>
+    </div> 
+    
+    <div class="restart-area">
+        <button id="restart-button" class="hidden"> Light Candles Again </button>
+    </div>
+    <p class="signature">
+    ...
+    <audio id="background-music" loop>
+      <source src="assets/music.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+  
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/hands/hands.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/hands/hands.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/camera_utils/camera_utils.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
