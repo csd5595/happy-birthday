@@ -44,11 +44,13 @@ body {
 }
 
 .webcam {
-    max-width: 300px; /* Use your desktop size as a max */
-    margin: 0 auto;
-    position: relative;
-    overflow: hidden; /* Prevent content from spilling */
+  max-width: 300px; /* Use your desktop size as a max */
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden; /* Prevent content from spilling */
 
+  height: 0; /* Collapse height */
+  padding-top: 75%; /* Sets height to 75% of the width (300px * 0.75 = 225px) */
 }
 
 #webcam {
@@ -60,7 +62,7 @@ body {
   top: 0;
   left: 0;
   width: 100%;
-  height: auto;
+  height: 100%;
   display: block;
 }
 
