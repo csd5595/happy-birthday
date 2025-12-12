@@ -9,6 +9,8 @@ const restartButton = document.getElementById("restart-button");
 const birthdayVideo = document.getElementById("birthday-video");
 // Constants
 const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+const PORTRAIT_WIDTH = 360;
+const PORTRAIT_HEIGHT = 640;
 const WEBCAM_WIDTH = isMobile ? 240 : 300;
 const WEBCAM_HEIGHT = isMobile ? 180 : 225;
 const BLOW_THRESHOLD = 70; // how sensitive the mic is
@@ -327,8 +329,8 @@ function startHandTracking() {
     onFrame: async () => {
       await hands.send({ image: video });
     },
-    width: WEBCAM_WIDTH,
-    height: WEBCAM_HEIGHT,
+    width:PORTRAIT_WIDTH,
+    height: PORTRAIT_HEIGHT,
   });
 
   camera.start();
