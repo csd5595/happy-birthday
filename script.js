@@ -47,7 +47,7 @@ hands.onResults((results) => {
   ctx.clearRect(0, 0, canvas.width, canvas.height);
 
   ctx.save();
-  ctx.scale(-1, 1);
+  //ctx.scale(-1, 1);
   ctx.drawImage(results.image, -canvas.width, 0, canvas.width, canvas.height);
   ctx.restore();
 
