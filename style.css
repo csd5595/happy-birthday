@@ -16,6 +16,10 @@ body {
 
 .page-title {
   font-size: 2rem;
+
+  /* 🌟 FIX: Add stable top margin to push the whole centered block down 🌟 */
+  margin-top: 1rem; 
+  margin-bottom: 0.5rem; /* Ensure space below the title */
   text-align: center;
   color:crimson;
   font-family: "Pixelify Sans", sans-serif;
