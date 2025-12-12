@@ -306,8 +306,8 @@ async function initCamera() {
   try {
     const stream = await navigator.mediaDevices.getUserMedia({
       video: {
-        width: PORTRAIT_WIDTH,
-        height: PORTRAIT_HEIGHT,
+        width:{ ideal: PORTRAIT_WIDTH },
+        height: { ideal: PORTRAIT_HEIGHT },
         facingMode: "user",
       },
     });
