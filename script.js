@@ -9,6 +9,10 @@ const restartButton = document.getElementById("restart-button");
 const birthdayVideo = document.getElementById("birthday-video");
 // Constants
 const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+
+const CAMERA_QUALITY_WIDTH = 640;
+const CAMERA_QUALITY_HEIGHT = 480; // This is a standard 4:3 ratio (1.33)
+
 const WEBCAM_WIDTH = isMobile ? 240 : 300;
 const WEBCAM_HEIGHT = isMobile ? 180 : 225;
 const BLOW_THRESHOLD = 70; // how sensitive the mic is
@@ -43,7 +47,7 @@ hands.setOptions({
 });
 
 // Hand tracking
-hands.onResults((results) => {
+/*hands.onResults((results) => {
   ctx.clearRect(0, 0, canvas.width, canvas.height);
 
   ctx.save();
@@ -68,7 +72,7 @@ hands.onResults((results) => {
     isHandDetected = false;
   }
 });
-
+*/
 // Match
 /*
 function updateMatchPosition() {
