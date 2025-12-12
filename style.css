@@ -46,10 +46,7 @@ body {
 .webcam {
   position: relative;
   width: 300px;
-  height: 0;
-  padding-top: 177.7%;
-  overflow: hidden;
-  margin: 0 auto;
+  height: 225px;
 }
 
 #webcam {
@@ -60,9 +57,8 @@ body {
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
+  width: 300px;
   height: 100%;
-  z-index: 10;
 }
 
 .cake-area {
