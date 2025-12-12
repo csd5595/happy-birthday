@@ -9,15 +9,13 @@ const restartButton = document.getElementById("restart-button");
 const birthdayVideo = document.getElementById("birthday-video");
 // Constants
 const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
-const PORTRAIT_WIDTH = 360;
-const PORTRAIT_HEIGHT = 640;
-const WEBCAM_WIDTH = isMobile ? 240 : 300;
-const WEBCAM_HEIGHT = isMobile ? 180 : 225;
+const PORTRAIT_WIDTH = isMobile ? 240 : 300;
+const PORTRAIT_HEIGHT = isMobile ? 427 : 533;
 const BLOW_THRESHOLD = 70; // how sensitive the mic is
 //const LIGHT_DISTANCE = 20; // how close match needs to be to light candles
 
-canvas.width = WEBCAM_WIDTH;
-canvas.height = WEBCAM_HEIGHT;
+canvas.width = PORTRAIT_WIDTH;
+canvas.height = PORTRAIT_HEIGHT;
 
 // Track hand position
 let handPosition = { x: 0.5, y: 0.5 };
