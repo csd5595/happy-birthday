@@ -16,10 +16,7 @@ body {
 
 .page-title {
   font-size: 2rem;
-
-  /* 🌟 FIX: Add stable top margin to push the whole centered block down 🌟 */
-  margin-top: 1rem; 
-  margin-bottom: 0.5rem; /* Ensure space below the title */
+  margin-top: -2px;
   text-align: center;
   color:crimson;
   font-family: "Pixelify Sans", sans-serif;
@@ -48,29 +45,22 @@ body {
 
 .webcam {
   position: relative;
-  width: 300px; 
-  height: 0;
-  padding-top: 177.7%;
-  overflow: hidden;
+  width: 300px;
+  height: 225px;
 }
 
 #webcam {
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  display: block;
+  display: none;
 }
 
 #canvas {
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
+  width: 300px;
   height: 100%;
-
-  z-index: 10;
 }
+
 .cake-area {
   position: relative;
   display: flex;
@@ -89,6 +79,7 @@ body {
 
 .cake {
   position: absolute;
+  top: -9%;
   width: 150px;
 }
 
