@@ -9,13 +9,17 @@ const restartButton = document.getElementById("restart-button");
 const birthdayVideo = document.getElementById("birthday-video");
 // Constants
 const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
-const PORTRAIT_WIDTH = isMobile ? 240 : 300;
-const PORTRAIT_HEIGHT = isMobile ? 427 : 533;
+
+const CAMERA_QUALITY_WIDTH = 640;
+const CAMERA_QUALITY_HEIGHT = 480; // This is a standard 4:3 ratio (1.33)
+
+const WEBCAM_WIDTH = isMobile ? 240 : 300;
+const WEBCAM_HEIGHT = isMobile ? 180 : 225;
 const BLOW_THRESHOLD = 70; // how sensitive the mic is
 //const LIGHT_DISTANCE = 20; // how close match needs to be to light candles
 
-canvas.width = PORTRAIT_WIDTH;
-canvas.height = PORTRAIT_HEIGHT;
+canvas.width = WEBCAM_WIDTH;
+canvas.height = WEBCAM_HEIGHT;
 
 // Track hand position
 let handPosition = { x: 0.5, y: 0.5 };
@@ -43,8 +47,7 @@ hands.setOptions({
 });
 
 // Hand tracking
-/*
-hands.onResults((results) => {
+/*hands.onResults((results) => {
   ctx.clearRect(0, 0, canvas.width, canvas.height);
 
   ctx.save();
@@ -305,8 +308,6 @@ async function initCamera() {
   try {
     const stream = await navigator.mediaDevices.getUserMedia({
       video: {
-        width:{ ideal: PORTRAIT_WIDTH },
-        height: { ideal: PORTRAIT_HEIGHT },
         facingMode: "user",
       },
     });
@@ -328,8 +329,8 @@ function startHandTracking() {
     onFrame: async () => {
       await hands.send({ image: video });
     },
-    width:PORTRAIT_WIDTH,
-    height: PORTRAIT_HEIGHT,
+    width: WEBCAM_WIDTH,
+    height: WEBCAM_HEIGHT,
   });
 
   camera.start();
