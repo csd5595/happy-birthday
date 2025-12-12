@@ -29,11 +29,7 @@ let isCandlesBlownOut = false;
 // but for safety, we set the source here.
 cakeImg.src = "assets/cake_lit.gif";
 
-const hands = new Hands({
-  locateFile: (file) => {
-    return `https://cdn.jsdelivr.net/npm/@mediapipe/hands/${file}`;
-  },
-});
+const hands = new Hands();
 
 hands.setOptions({
   maxNumHands: 1,
