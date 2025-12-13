@@ -304,8 +304,8 @@ async function initCamera() {
   try {
     const stream = await navigator.mediaDevices.getUserMedia({
       video: {
-       // width: WEBCAM_WIDTH,
-       // height: WEBCAM_HEIGHT,
+        width: WEBCAM_WIDTH,
+        height: WEBCAM_HEIGHT,
         facingMode: "user",
       },
     });
@@ -327,8 +327,8 @@ function startHandTracking() {
     onFrame: async () => {
       await hands.send({ image: video });
     },
-    width: video.videoWidth,
-    height: video.videoHeight,
+    width: WEBCAM_WIDTH,
+    height: WEBCAM_HEIGHT,
   });
 
   camera.start();

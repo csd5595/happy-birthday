@@ -47,7 +47,6 @@ body {
   position: relative;
   width: 300px;
   height: 225px;
-  padding-top: 177.7%;
 }
 
 #webcam {
@@ -60,7 +59,6 @@ body {
   left: 0;
   width: 300px;
   height: 100%;
-  object-fit: cover;
 }
 
 .cake-area {
